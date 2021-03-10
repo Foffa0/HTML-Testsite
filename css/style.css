@@ -506,4 +506,10 @@ footer {
     .picCarousel {
         max-width: 95%;
     }
+    #headerTitle {
+        font-size: 20px;
+    }
+    #headerTitle-sm {
+        font-size: 15px;
+    }
 }
