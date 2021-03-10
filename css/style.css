@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+
+.welcomeOverlay {
+    display: initial;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    transition: all 0.5s linear 0s;
+}
+
+.welcomeOverlay--inactiv {
+    display: none;
+}
+
+.welcomeOverlayBackground {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: all 0.5s linear 0s;
+}
+
+.welcomeOverlayBackgroundFade {
+    opacity: 0;
+}
+
+.typewriter {
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 500%;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%); 
+    background:
+    url('pictures/cool-background.png')  
+    no-repeat center center;
+    background-size: 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align:center;
+    background-attachment: fixed;
+    animation: typewriter 1s steps(20) 0.5s 1 normal both,
+             blinkTextCursor 500ms steps(44) 0s 5 normal;
+    transition: all 1s linear 0s;
+}
+
+.welcomeOverlayWhite {
+    color: white;
+    border: none;
+    padding-right: 1px;
+}
+
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 600px;}
+}
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+}
+
+.head {
+    text-align: center;
+    color: white;
+    padding: 10px;
+    background-image: url("pictures/beach_edited.jpg");
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%, 50%;
+    height: 400px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+
+.headerText {
+    margin-top: 115px;
+    text-shadow: 0px 0px 5px black;
+}
+
+#headerTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 45px;
+}
+
+#headerTitle-sm {
+    font-size: 20px;
+}
+
+
+.nav {
+    overflow: hidden;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
+    margin-top: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    background-color: #24252a;
+}
+.nav a, li {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.navigationLinks {
+    list-style: none;
+}
+
+.navigationLinks li {
+    display: inline-block;
+    padding-top: 15px;
+}
+
+.navigationLinks li a {
+    transition: all 0.3s ease 0s;
+}
+
+.navigationLinks li a:hover {
+    color: cadetblue;
+}
+
+#logo {
+    font-family: 'Bree Serif', serif;
+    font-size: 18px;
+}
+
+.contact {
+    padding: 23px 25px;
+    transition: color 0.3s ease 0s;
+    border: solid #24252a;
+    border-width: 1px;
+}
+
+.contact:hover {
+    color: dodgerblue;
+}
+
+.modal-header {
+    background-color: cadetblue;
+}
+
+
+.modal-footer {
+    background-color: rgb(231, 231, 231);
+}
+
+
+.articleText {
+    font-family:'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.row-title {
+    font-size: 20px;
+}
+
+.row-text {
+    font-size: 18px;
+}
+
+.iconbar {
+    min-width: 200px;
+}
+
+.breakColumns {
+    width: 0%;
+}
+
+.picCarousel {
+    max-width: 45%;
+    z-index: 0;
+}
+
+#carouselExampleIndicators {
+    border: 2px solid gray;
+    padding: 10px;
+    z-index: 0;
+}
+
+.carousel-section {
+    background-color: rgb(235, 235, 235);   
+}
+
+.carousel {
+    z-index: 0;
+}
+
+.carousel-dark {
+    background-color: rgb(54, 50, 50);
+}
+
+.lowerSection {
+    height: 380px;
+}
+#rescaleText {
+    font-size: 2vw;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    font-family: 'News Cycle', sans-serif;
+    font-weight: 400;
+    width: 100%;
+    padding: 50px;
+    background-color: #24252a;
+    text-transform: uppercase;
+}
+
+.footerHeading {
+    color: white;
+    font-size: 23px;
+}
+
+.mail {
+    /*position: relative;*/
+    color: azure;
+    background-color: #424242;
+    border: none;
+    box-shadow: none;
+    /*
+    padding: 10px 15px 10px 15px;
+    width: 300px;
+    border-radius: 2px 0px 0px 2px;*/
+    transition: background-color 0.3s linear 0.1s;
+}
+
+.mail:focus {
+    background-color: #4b4a4a;
+}
+
+.mail:focus {
+    color: azure;
+}
+
+#submitButton {
+    text-transform: uppercase;
+    z-index: 0;
+}
+
+.subscribeButton {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    width: 1%;
+    border: none;
+    
+}
+
+
+#followMe {
+    color: white;
+    margin-left: 44px;
+}
+
+.col-5 {
+    margin-right: 30px;
+}
+
+.footerLinks {
+    list-style: none;
+    padding: 0px 0px 0px 35px;
+
+}
+
+.footerLinks a {
+    color: white;
+    margin: 0 30px 20px 0;
+    opacity: 1;
+    transition: all 0.3s ease 0s;
+    display: block;
+}
+
+.footerLinks a:hover {
+    opacity: 0.7;
+}
+
+.facebook {
+    background: url("pictures/main_sprites.png") no-repeat -340px -48px;
+    /*display: block;
+    float: left;*/
+    width: 26px;
+    height: 26px;
+}
+
+.twitter {
+    background: url("pictures/main_sprites.png") no-repeat -376px -48px;
+    /*display: block;
+    float: left;*/
+    width: 26px;
+    height: 26px;
+}
+
+.youtube {
+    background: url("pictures/main_sprites.png") no-repeat -416px -48px;
+    /*display: inline-block;
+    /*float: left;*/
+    width: 26px;
+    height: 26px;
+}
+
+.instagram {
+    background: url("pictures/main_sprites.png") no-repeat -454px -48px;
+    /*display: block;
+    float: left;*/
+    width: 26px;
+    height: 26px;
+}
+
+.darkmode-switch {
+    padding-left: 80px;
+    position: relative;
+    z-index: 0;
+}
+
+.dark-mode {
+    background-color: rgb(24, 24, 24);
+    color: white;
+}
+
+.switch-border {
+  position: absolute;
+  left: 33%;
+  top: 3px;
+  width: 35px;
+  height: 18px;
+  background: none;
+  background-size: 200%;
+  padding: 3px;
+  filter: blur(5px);
+  z-index: 0;
+  animation: glowing 10s linear infinite;
+  transition: background 1s ease 0s;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+.form-check-input {
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    left: 70%;
+}
+
+.form-check-input:checked ~ .switch-border {
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background-size: 150%;
+}
+
+
+/*Mobile nav*/
+
+.menu {
+    display: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding-right: 30px;
+    padding-top: 15px;
+    color: white;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu:hover{
+    color: dodgerblue;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s, opacity 0.2s ease-in-out 0s;
+}
+
+.overlay--active {
+    width: 100%;
+    opacity: 1;
+}
+
+.overlayContent {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  color: white;
+  transition: color 0.3s ease 0s;
+  text-decoration: none;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #0088a9;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-height: 500px) {
+    .overlay a {
+        font-size: 20px;
+    }
+    .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .navigationLinks,
+    .contact {
+        display: none;
+    }
+    .menu {
+        display: initial;
+    }
+    .picCarousel {
+        max-width: 80%;
+    }
+    .breakColumns {
+        width: 100%;
+    }
+    .carousel-text {
+        width: 100%;
+    }
+    #rescaleText {
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .nav {
+        margin-top: 60%;
+    }
+    .picCarousel {
+        max-width: 95%;
+    }
+}
